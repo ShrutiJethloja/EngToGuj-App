@@ -15,22 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //Find the View that shows number category
         TextView numbers = (TextView) findViewById(R.id.number);
         TextView family = (TextView) findViewById(R.id.family);
         TextView color = (TextView) findViewById(R.id.colors);
         TextView phrases = (TextView) findViewById(R.id.phrases);
-
-////        //Method 1 :
-//
-//        //You need to make another class for implementing on Click listener (NumbersClickListener)
-//        //and need a method to implement Intent (openNumbersList)
-//        NumbersClickListener clickListener = new NumbersClickListener();
-//
-//        //set a click listener on that View
-//        numbers.setOnClickListener(clickListener);
-
-        //Method 2 :
 
         numbers.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,9 +57,4 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
-//    public void openNumbersList(View view) {
-//        Intent i = new Intent(MainActivity.this, NumbersActivity.class);
-//        startActivity(i);
-//    }
 }
